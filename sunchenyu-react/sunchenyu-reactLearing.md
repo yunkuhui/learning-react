@@ -166,7 +166,7 @@ class CustomTextInput extends React.Component {
 
 ```
 * Refs 与函数式组件：
-你不能在函数式组件上使用 ref 属性，因为它们没有实例，如果你需要使用 ref，你需要将组件转化成 类组件，就像需要 生命周期方法 或者 state 一样。
+你不能在函数式组件上使用 ref 属性，因为它们没有实例，如果你需要使用 ref，你需要将组件转化成类组件，就像需要生命周期方法或者 state 一样。
 
 ```
 
@@ -225,5 +225,5 @@ ReactDOM.render(
   document.getElementById('example')
 );
 ```
-* 如果父组件没有为 this.props.name 传值，defaultProps 会给其一个默认值。propTypes 的类型检测是在defaultProps 解析之后发生的，因此也会对默认属性 defaultProps 进行类型检测。
+* 如果父组件没有为 this.props.name 传值，defaultProps 会给其一个默认值。propTypes 的类型检测是在 defaultProps 解析之后发生的，因此也会对默认属性 defaultProps 进行类型检测。
 
