@@ -5,7 +5,7 @@
 * 不直接操作 DOM 对象，而是通过虚拟 DOM 通过 diff 算法以最小的步骤作用到真实的 DOM 上。
 * 不便于直接操作 DOM，大多数时间只是对 virtual DOM 进行编程。
 
-## 一，JSX
+## JSX
 
 ```
 const element = <h1>Hello, world!</h1>;
@@ -13,7 +13,7 @@ const element = <h1>Hello, world!</h1>;
 HTML 语言直接写在 JavaScript 语言之中，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写；它是 JavaScript 的一种扩展语法。
 JSX 书写：遇到 HTML 标签以 “<” 开头书写，就用 HTML 规则解析；遇到代码块，以 “{” 开头书写，就用 JavaScript 规则解析。
 
-## 二，ReactDOM.render()
+## ReactDOM.render()
 
 ReactDOM.render() 是 React 的最基本方法，用于将模板转化为 HTML 语言，并将其插入到指定的 DOM 节点；
 例如：
@@ -29,7 +29,7 @@ ReactDOM.render(
 这段代码是将一个 h1 标题插入到 id 为 root 的 DOM 节点；
 React 只更新必须要更新的部分；React DOM 会将元素及其子元素与之前版本逐一对比，并只对有必要更新的 DOM 进行更新, 以达到 DOM 所需的状态。
 
-## 三，组件和属性
+## 组件和属性
 
 组件名称总是以大写字母开头，组件必须返回一个单独的根元素，组件可以在它们的输出中引用其它组件。
 在 React 中组件分为函数式组件、类组件两种；
@@ -97,7 +97,7 @@ this.setState({comment: 'Hello'});
 
 React 为了优化性能，有可能将多个 setState() 调用合并为一次更新；
 
-## 四，在类中添加生命周期方法
+## 在类中添加生命周期方法
 
     * componentWillMount ：在渲染前调用，在客户端也在服务端；
     * componentDidMount ：在第一次渲染后调用，只在客户端，之后组件已经生成了对应的 DOM 结构，可以通过 this.getDOMNode() 来进行访问；也可以在这个方法中调用 setTimeout，setInterval 或者发送AJAX请求等操作。
@@ -107,7 +107,7 @@ React 为了优化性能，有可能将多个 setState() 调用合并为一次�
     * componentDidUpdate ：在组件完成更新后立即调用，在初始化时不会被调用。
     * componentWillUnmount ：在组件从DOM中移除的时候调用。
 
-## 五，处理事件
+## 处理事件
 
 * 在 React 中绑定点击事件：
 ```
@@ -131,7 +131,7 @@ function ActionLink() {
 }
 ```
 
-## 六，获取真实的DOM节点
+## 获取真实的DOM节点
 
 * 组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做虚拟 DOM （virtual DOM）。只有当它插入文档以后，才会变成真实的 DOM。但是，有时需要从组件获取真实 DOM 的节点，这时就要用到 ref 属性。由于 refs 属性获取的是真实 DOM，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。下面代码中，通过为组件指定 Click 事件的回调函数，确保了只有等到真实 DOM 发生 Click 事件之后，才会读取 refs 属性。
 ```
