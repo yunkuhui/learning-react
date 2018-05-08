@@ -63,7 +63,7 @@ function Welcome(props) {
 Props 是只读的。
 无论你用函数或类的方法来声明组件, 它都无法修改其自身 props。所有 React 组件都必须是纯函数，并禁止修改其自身 props。
 
-### 4，状态 state (在类组件中才可以定义 state )
+### 4，状态 state (在类组件中才可以定义 state)
 
 ```
 class Clock extends React.Component {
@@ -100,12 +100,12 @@ React 为了优化性能，有可能将多个 setState() 调用合并为一次�
 ## 在类中添加生命周期方法
 
     * componentWillMount ：在渲染前调用，在客户端也在服务端；
-    * componentDidMount ：在第一次渲染后调用，只在客户端，之后组件已经生成了对应的 DOM 结构，可以通过 this.getDOMNode() 来进行访问；也可以在这个方法中调用 setTimeout，setInterval 或者发送AJAX请求等操作。
+    * componentDidMount ：在第一次渲染后调用，只在客户端，之后组件已经生成了对应的 DOM 结构，可以通过 this.getDOMNode() 来进行访问；也可以在这个方法中调用 setTimeout，setInterval 或者发送 AJAX 请求等操作。
     * componentWillReceiveProps ：在组件接收到一个新的 prop (更新后)时被调用。这个方法在初始化的 render 时不会被调用；
     * shouldComponentUpdate ：返回一个布尔值。在组件接收到新的 props 或者 state 时被调用。在初始化时或者 forceUpdate 时不会被调用，可以在你确认不需要更新组件时使用。
     * componentWillUpdate ：在组件接收到新的 props 或者 state 但还没有 render 时被调用，在初始化时不会被调用。
     * componentDidUpdate ：在组件完成更新后立即调用，在初始化时不会被调用。
-    * componentWillUnmount ：在组件从DOM中移除的时候调用。
+    * componentWillUnmount ：在组件从 DOM 中移除的时候调用。
 
 ## 处理事件
 
@@ -133,7 +133,7 @@ function ActionLink() {
 
 ## 获取真实的DOM节点
 
-* 组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做虚拟 DOM （virtual DOM）。只有当它插入文档以后，才会变成真实的 DOM。但是，有时需要从组件获取真实 DOM 的节点，这时就要用到 ref 属性。由于 refs 属性获取的是真实 DOM，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。下面代码中，通过为组件指定 Click 事件的回调函数，确保了只有等到真实 DOM 发生 Click 事件之后，才会读取 refs 属性。
+* 组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做虚拟 DOM(virtual DOM)。只有当它插入文档以后，才会变成真实的 DOM。但是，有时需要从组件获取真实 DOM 的节点，这时就要用到 ref 属性。由于 refs 属性获取的是真实 DOM，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。下面代码中，通过为组件指定 Click 事件的回调函数，确保了只有等到真实 DOM 发生 Click 事件之后，才会读取 refs 属性。
 ```
 class CustomTextInput extends React.Component {
   constructor(props) {
