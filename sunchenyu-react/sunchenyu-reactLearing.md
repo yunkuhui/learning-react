@@ -13,7 +13,7 @@ const element = <h1>Hello, world!</h1>;
 HTML 语言直接写在 JavaScript 语言之中，这就是 JSX 的语法，它允许 HTML 与 JavaScript 的混写；它是 JavaScript 的一种扩展语法。
 JSX 书写：遇到 HTML 标签以 “<” 开头书写，就用 HTML 规则解析；遇到代码块，以 “{” 开头书写，就用 JavaScript 规则解析。
 
-## ReactDOM.render()
+## 如何渲染 DOM
 
 ReactDOM.render() 是 React 的最基本方法，用于将模板转化为 HTML 语言，并将其插入到指定的 DOM 节点；
 例如：
