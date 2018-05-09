@@ -112,11 +112,11 @@ const xxx = {
 } 
 ```
 * `css` 模块化，保证自己写的不影响其他模块，避免如果有一个模块有个叫 `aaa` 的样式，另一个模块也有一个叫 `aaa` 的样式互不影响
-  ① 安装三个插件 `babel-plugin-react-html-attrs， style-loader， css-loader` 
-  ② `className` 可以换成 `class` 
-  ③ `webpack` 里配置 `plugins ：[‘react-html-attrs’]` 
-  ④ 可以用 `var xxx = require(“../../css/footer”);` 把 `css` 引进来， 然后 `<footer class=”xxx .css文件里的样式名字”></footer>` 查看样式时候样式前面自动加了 `xxx-样式名字`， 所以不会影响同名的样式
-  ⑤ `jsx`样式与`css`互转可以使用一个工具， `css to React` 
+  </br>① 安装三个插件 `babel-plugin-react-html-attrs， style-loader， css-loader`</br> 
+  </br>② `className` 可以换成 `class`</br> 
+  </br>③ `webpack` 里配置 `plugins ：[‘react-html-attrs’]`</br> 
+  </br>④ 可以用 `var xxx = require(“../../css/footer”);` 把 `css` 引进来， 然后 `<footer class=”xxx .css文件里的样式名字”></footer>` 查看样式时候样式前面自动加了 `xxx-样式名字`， 所以不会影响同名的样式</br>
+  </br>⑤ `jsx`样式与`css`互转可以使用一个工具， `css to React`</br> 
 
 ## 接收数据用 axios，跟 vue 里面用法一样
 
