@@ -242,12 +242,13 @@ const REMOVE= ‘减’
 //新建 store， 根据老的 state 和 action， 生成新的 state
 //定义一个 index.redux.js 文件存储 reducer 操作
 export function counter(state=0, action) {
-  Switch(action.type) {
-    case ‘ADD ’:
-    return state +1
-    case ‘REMOVE’:
-    return state -1
-    return 10
+  switch(action.type) {
+    case 'ADD':
+      return state +1
+    case 'REMOVE':
+      return state -1
+    default:
+      return 10
   }
 }
 export function add() {
