@@ -44,6 +44,7 @@ function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 ```
+函数式组件缺点：无法使用 ref；无生命周期方法；无法控制组件的重渲染，因为无法使用 shouldComponentUpdate 方法，当组件接受到新的属性时则会重渲染；
 
 ### 2，类组件
 
@@ -115,7 +116,7 @@ this.setState((prevState, props) => ({
     * componentWillMount ：在渲染前调用。
     * componentDidMount ：在第一次渲染后调用，之后组件已经生成了对应的 DOM 结构，可以在这个方法中调用 setTimeout，setInterval 或者发送 AJAX 请求等操作。
     * componentWillReceiveProps ：在组件接收到一个新的 prop (更新后)时被调用，这个方法在初始化的 render 时不会被调用。
-    * shouldComponentUpdate ：返回一个布尔值。在组件接收到新的 props 或者 state 时被调用。在初始化时或者 forceUpdate 时不会被调用，可以在你确认不需要更新组件时使用。
+    * shouldComponentUpdate ：返回一个布尔值。在组件接收到新的 props 或者 state 时被调用，在初始化时不会被调用。当该函数返回 true 时才会进行重渲染，如果返回 false 则不会进行重渲染，在这里 shouldComponentUpdate 默认返回 true，可以在你确认不需要更新组件时使用。
     * componentWillUpdate ：在组件接收到新的 props 或者 state 但还没有 render 时被调用，在初始化时不会被调用。
     * componentDidUpdate ：在组件完成更新后立即调用，在初始化时不会被调用。
     * componentWillUnmount ：在组件从 DOM 中移除的时候调用。
