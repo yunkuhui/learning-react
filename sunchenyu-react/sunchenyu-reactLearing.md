@@ -113,7 +113,7 @@ this.setState((prevState, props) => ({
 ## 在类中添加生命周期方法
 
     * componentWillMount ：在渲染前调用。
-    * componentDidMount ：在第一次渲染后调用，之后组件已经生成了对应的 DOM 结构，可以通过 this.getDOMNode() 来进行访问；也可以在这个方法中调用 setTimeout，setInterval 或者发送 AJAX 请求等操作。
+    * componentDidMount ：在第一次渲染后调用，之后组件已经生成了对应的 DOM 结构，可以在这个方法中调用 setTimeout，setInterval 或者发送 AJAX 请求等操作。
     * componentWillReceiveProps ：在组件接收到一个新的 prop (更新后)时被调用，这个方法在初始化的 render 时不会被调用。
     * shouldComponentUpdate ：返回一个布尔值。在组件接收到新的 props 或者 state 时被调用。在初始化时或者 forceUpdate 时不会被调用，可以在你确认不需要更新组件时使用。
     * componentWillUpdate ：在组件接收到新的 props 或者 state 但还没有 render 时被调用，在初始化时不会被调用。
